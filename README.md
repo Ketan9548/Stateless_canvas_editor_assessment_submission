@@ -6,7 +6,7 @@ A web-based 2D canvas editor built using **React**, **Fabric.js**, and **Firebas
 
 ## 🚀 Live Demo
 
-🔗 [View Live Application](https://your-live-demo-link.com)
+🔗 [[View Live Application](https://your-live-demo-link.com)](https://stateless-canvas-editor-assessment.vercel.app/canvas/491e5082-6db1-4987-b16c-32ef7bf30328)
 
 ---
 
