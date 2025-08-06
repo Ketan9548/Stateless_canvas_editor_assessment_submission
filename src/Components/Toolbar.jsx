@@ -48,17 +48,17 @@ const Toolbar = ({ fabricRef }) => {
                 className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
                 onClick={() => enablePen(canvas)}
             >Pen Tool</button>
-            <button
-                className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
-                onClick={() => disablePen(canvas)}
-            >Disable Pen</button>
             <input
                 type="color"
-                className='border-2 size-10 border-gray-300 rounded p-1'
+                className='border-2 border-gray-300 rounded p-1'
                 onChange={(e) => handleColorChange(e.target.value)}
                 title="Pick a color"
                 style={{ marginLeft: '10px' }}
             />
+            <button
+                className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
+                onClick={() => disablePen(canvas)}
+            >Disable Pen</button>
 
             <button
                 className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
