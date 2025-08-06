@@ -10,6 +10,14 @@ import {
 
 const Toolbar = ({ fabricRef }) => {
     const canvas = fabricRef?.current;
+    const handleColorChange = (color) => {
+        const activeObject = canvas.getActiveObject();
+        if (activeObject) {
+            activeObject.set({ fill: color });
+            canvas.requestRenderAll();
+        }
+    };
+
 
     if (!canvas) {
         return (
@@ -40,7 +48,12 @@ const Toolbar = ({ fabricRef }) => {
                 className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
                 onClick={() => enablePen(canvas)}
             >Pen Tool</button>
-
+            <input
+                type="color"
+                onChange={(e) => handleColorChange(e.target.value)}
+                title="Pick a color"
+                style={{ marginLeft: '10px' }}
+            />
             <button
                 className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
                 onClick={() => disablePen(canvas)}
