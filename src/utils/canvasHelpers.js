@@ -1,4 +1,3 @@
-// src/utils/canvasHelpers.js
 import * as fabric from 'fabric';
 
 // this for adding shapes and text to the canvas
@@ -43,13 +42,13 @@ export const addText = (canvas) => {
 export const enablePen = (canvas) => {
     if (!canvas) return;
 
-    canvas.isDrawingMode = true; // ✅ Enable drawing mode
-    canvas.freeDrawingBrush = new fabric.PencilBrush(canvas); // ✅ Use PencilBrush
+    canvas.isDrawingMode = true; 
+    canvas.freeDrawingBrush = new fabric.PencilBrush(canvas);
 
-    canvas.freeDrawingBrush.color = '#000000'; // Or any color
-    canvas.freeDrawingBrush.width = 2; // Brush width in pixels
+    canvas.freeDrawingBrush.color = '#000000';
+    canvas.freeDrawingBrush.width = 2; 
 
-    canvas.renderAll(); // Optional but good
+    canvas.renderAll(); 
 };
 
 // this for disabling the pen tool

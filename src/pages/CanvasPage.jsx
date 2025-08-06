@@ -6,8 +6,8 @@ import Toolbar from "../Components/Toolbar";
 import ShareButton from "../Components/ShareButton";
 
 const CanvasPage = () => {
-  const { id } = useParams();                   // scene ID from URL
-  const fabricRef = useRef(null);              // shared canvas reference
+  const { id } = useParams();
+  const fabricRef = useRef(null);
   const [isCanvasReady, setIsCanvasReady] = useState(false);
 
   // Called when canvas is initialized in CanvasEditor
@@ -26,7 +26,6 @@ const CanvasPage = () => {
 
   return (
     <div className="w-full h-screen flex flex-col">
-      {/* Toolbar and Share Button */}
       <div className="p-2 border-b flex gap-2 items-center bg-gray-100">
         {isCanvasReady ? (
           <Toolbar fabricRef={fabricRef} />
@@ -36,7 +35,6 @@ const CanvasPage = () => {
         <ShareButton />
       </div>
 
-      {/* Main canvas area */}
       <CanvasEditor
         sceneId={id}
         fabricRef={fabricRef}

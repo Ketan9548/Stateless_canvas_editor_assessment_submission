@@ -65,8 +65,6 @@ function CanvasEditor({ sceneId, fabricRef, onCanvasReady }) {
     };
   }, [sceneId]);
 
-
-  /* 🔄 Debounced autosave hook */
   useCanvasAutosave(fabricRef, sceneId);
 
   return <canvas ref={canvasRef} className="w-full h-full" />;
